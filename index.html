@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./phone clock.css" />
+    <title>Document</title>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- //phone outer borderI(body) -->
+    <div class="outer">
+      <!-- //fingerprint lock icon for open the lock screen -->
+      <div class="lockicon" ondblclick="show_time()">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+      <!-- //inner border(body) with screen(wallpaper) -->
+      <div class="inner" onclick="awake()">
+        <!-- //top on screen Notification bar with some icons -->
+        <div class="icons">
+          <p class="icons_left"><b>Charging</b></p>
+          <b class="Vg" style="font-size: 9px">5G</b>
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-battery-half" style="color: rgb(7, 123, 110)"></i>
+        </div>
+        <!-- //screen class for containing Notification and music images  -->
+        <div class="screen">
+          <img src="./app_img/Notifications.png" alt="Notifications" draggable="true" />
+          <img src="./app_img/Music.png" alt="Music" draggable="true" />
+        </div>
+        <!-- // for displaying time on the screen -->
+        <div class="time"><!--hours and minutes--></div>
+        <div class="time" id="second1"><!-- day,date and month--></div>
+        <!-- //for displaying the apps icons and iframe -->
+        <div class="allapps">
+          <div class="insta" id="app1"></div>
+          <div class="insta" id="app2"></div>
+          <div class="insta" id="app3"></div>
+          <div class="insta" id="app4"></div>
+          <div class="insta" id="app5"></div>
+          <div class="insta" id="app6"></div>
+          <div class="insta" id="app7"></div>
+          <div class="insta" id="app8"></div>
+        </div>
+        <div class="searchbar"></div>
+        <iframe src="" frameborder="1" id="firstframe"></iframe>
+      </div>
+      <!-- //camera on screen -->
+      <div class="camera"></div>
+      <!-- //geature back button like small bar( for exiting from the apps) -->
+      <div class="backbtn" id="backbutton" onclick="exitapps()" draggable="true"></div>
+    </div>
+  </body>
+</html>
